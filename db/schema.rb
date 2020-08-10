@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_06_164815) do
+ActiveRecord::Schema.define(version: 2020_08_10_191651) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cellars", force: :cascade do |t|
+    t.bigint "vineyard_id"
+    t.bigint "varietal_id"
+    t.index ["varietal_id"], name: "index_cellars_on_varietal_id"
+    t.index ["vineyard_id"], name: "index_cellars_on_vineyard_id"
+  end
+
+  create_table "preferences", force: :cascade do |t|
+    t.bigint "varietal_id"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_preferences_on_user_id"
+    t.index ["varietal_id"], name: "index_preferences_on_varietal_id"
+  end
+
+  create_table "regions", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "image_url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +44,26 @@ ActiveRecord::Schema.define(version: 2020_08_06_164815) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "username", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "varietals", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vineyards", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "wines_available", null: false
+    t.string "region", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "region_id", null: false
+    t.index ["region_id"], name: "index_vineyards_on_region_id"
   end
 
 end
