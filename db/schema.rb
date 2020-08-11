@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_191651) do
   create_table "regions", force: :cascade do |t|
     t.string "name", null: false
     t.string "image_url", null: false
+    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_191651) do
 
   create_table "varietals", force: :cascade do |t|
     t.string "name", null: false
+    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_08_10_191651) do
     t.string "name", null: false
     t.string "address", null: false
     t.string "wines_available", null: false
-    t.string "region", null: false
+    t.string "region_location", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "region_id", null: false
