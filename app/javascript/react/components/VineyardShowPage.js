@@ -14,7 +14,7 @@ const VineyardShowPage = (props) => {
   let vineyard_id = props.match.params.id;
 
   useEffect(() => {
-    fetch(`/api/v1/vineyard/${vineyard_id}`)
+    fetch(`/api/v1/vineyards/${vineyard_id}`)
       .then((response) => {
         if (response.ok) {
           return response;
@@ -32,6 +32,7 @@ const VineyardShowPage = (props) => {
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
+  // VineyardInformationComponent will be used when adding the review component
   return (
     <div>
       <VineyardInformationComponent
