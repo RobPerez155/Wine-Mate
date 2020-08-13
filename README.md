@@ -1,4 +1,5 @@
 # README
+[![Codeship Status for RobPerez155/Wine-Mate](https://app.codeship.com/projects/f35ddb10-b89b-0138-8bf5-0ed9a3a19fca/status?branch=master)](https://app.codeship.com/projects/404816)
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
