@@ -11,6 +11,8 @@ const VineyardShowPage = (props) => {
     region_location: "",
   });
 
+  const [getReviews, setReviews] = useState([]);
+
   let vineyard_id = props.match.params.id;
 
   useEffect(() => {
@@ -26,14 +28,18 @@ const VineyardShowPage = (props) => {
       })
       .then((response) => response.json())
       .then((body) => {
-        let vineyard = body.vineyardData;
+        let vineyard = body;
         setVineyardData(vineyard);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
-  // VineyardInformationComponent will be used when adding the review component
+  let reviewList = getReviews.map((review) => {
+    return <ReviewTile key={review.id} reviewData={review} />;
+  });
+
   return (
+  <div>
     <div>
       <VineyardInformationComponent
         name={getVineyardData.name}
@@ -42,6 +48,32 @@ const VineyardShowPage = (props) => {
         region_location={getVineyardData.region_location}
       />
     </div> 
+    <div>
+    <Link
+      to={{
+        pathname: `/vineyards/${vineyard_id}/reviews/new`,
+        reviewProps: { vineyard_id },
+      }}
+      class="button primary"
+    >
+      New Review
+    </Link>
+  </div>
+  <table class="hover">
+  <thead>
+    <tr>
+      <div class="table-top">
+        <th width="200">Username</th>
+        <th width="450">Review</th>
+        <th width="200">Rating</th>
+        <th width="200">Wines Tasted</th>
+        <th width="200"> </th>
+      </div>
+    </tr>
+  </thead>
+  <tbody>{reviewList}</tbody>
+</table>
+</div> 
   );
 };
 

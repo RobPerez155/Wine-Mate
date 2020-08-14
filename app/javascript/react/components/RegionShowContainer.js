@@ -23,7 +23,7 @@ const RegionShowContainer = (props) => {
       .then((body) => {
         let vineyardList = body;
         setVineyards(vineyardList.vineyards);
-        setRegionName(vineyardList.region.name);
+        setRegionName(vineyardList.name);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
@@ -38,7 +38,6 @@ const RegionShowContainer = (props) => {
       />
     );
   });
-
   return (
     <div>
       <h3>{getRegionName}</h3>
