@@ -30,6 +30,7 @@ const VineyardShowContainer = (props) => {
       .then((body) => {
         let vineyard = body.vineyardData;
         let reviews = body.reviewsData;
+        // let varietalList = body.varietalsData;
         setVineyardData(vineyard);
         setReviews(reviews)
       })
