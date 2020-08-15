@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :regions, only: [:index, :show]
       resources :vineyards, only: [:show] do
         resources :reviews, only: [:create]
+        resources :cellars, only: [:show]
       end
       resources :varietals, only: [:index]
       resources :cellars, only: [:show]
