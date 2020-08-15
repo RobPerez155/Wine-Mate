@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import VineyardInformationComponent from "./VineyardInformationComponent";
-import VineyardTile from "./VineyardTile";
+import ReviewTile from "./ReviewTile";
 import { Link } from "react-router-dom";
 
-const VineyardShowPage = (props) => {
+const VineyardShowContainer = (props) => {
   const [getVineyardData, setVineyardData] = useState({
     name: "",
     address: "",
@@ -28,8 +28,10 @@ const VineyardShowPage = (props) => {
       })
       .then((response) => response.json())
       .then((body) => {
-        let vineyard = body;
+        let vineyard = body.vineyardData;
+        let reviews = body.reviewsData;
         setVineyardData(vineyard);
+        setReviews(reviews)
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
@@ -77,4 +79,4 @@ const VineyardShowPage = (props) => {
   );
 };
 
-export default VineyardShowPage;
+export default VineyardShowContainer;
