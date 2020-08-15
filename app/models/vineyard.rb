@@ -6,6 +6,7 @@ class Vineyard < ApplicationRecord
 
   belongs_to :region
   has_many :cellars
+  has_many :reviews
 end
 
 

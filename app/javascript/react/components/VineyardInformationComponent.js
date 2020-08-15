@@ -1,5 +1,5 @@
 import React from "react";
-// Ground work for Review page
+
 const VineyardInformationComponent = ({ name, address, wines_available, region_location }) => {
   return (
     <>

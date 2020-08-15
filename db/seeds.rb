@@ -34,6 +34,7 @@ concord = Varietal.create(name:"Concord", description:"Yummy yummy wine in mah t
 niagara = Varietal.create(name:"Niagara", description:"Yummy yummy wine in mah tummy")
 rosé = Varietal.create(name:"Rosé", description:"Yummy yummy wine in mah tummy")
 
+# create join table "cellar" seed, Cellar.create()
 gouveia = Vineyard.create(name:"Gouveia Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: "chardonnay", region_location: "schmoop", region_id: northeast)
 
 # gouveia = Vineyard.create(name:"Gouveia Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: [chardonnay, pinot_grigio, cabernet_sauvignon, merlot, pinot_noir, zinfandel], region_location: northeast)

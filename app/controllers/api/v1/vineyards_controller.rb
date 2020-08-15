@@ -1,5 +1,7 @@
 class Api::V1::VineyardsController < ApplicationController
   def show
-    render json: Vineyard.all
+    @vineyard = Vineyard.find(params[:id])
+    @reviews = @vineyard.reviews
+    render json: { vineyardData: @vineyard, reviewsData: @reviews }
   end
 end
