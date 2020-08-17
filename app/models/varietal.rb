@@ -3,5 +3,5 @@ class Varietal < ApplicationRecord
   validates :description, presence: true
 
   has_many :cellars
-  has_many :preferences
+  has_many :vineyards, through: :cellars
 end
