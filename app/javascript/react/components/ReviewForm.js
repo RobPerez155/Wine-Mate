@@ -1,27 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { StarRating } from "@thumbtack/thumbprint-react";
+import { StarRating } from "@thumbtack/thumbprint-react";
 
 const ReviewForm = (props) => {
 
   let vineyardId = props.match.params.vineyard_id
 
   // These 4 states hold hover values for each review attribute
-  // const [overallHoverRating, setOverallHoverRating] = useState(undefined);
+  const [overallHoverRating, setOverallHoverRating] = useState(undefined);
 
   const [reviewData, setReviewData] = useState({
-      // overall: null,
-      overall: "",
+      overall: null,
       comment: "",
-      manufacturer: ""
+      varietal: ""
   })
 
-  // const handleStarChange = (value, ratingName) => {
-  //   setReviewData({
-  //     ...reviewData,
-  //     [ratingName]: value,
-  //   });
-  // }
+  const handleStarChange = (value, ratingName) => {
+    setReviewData({
+      ...reviewData,
+      [ratingName]: value,
+    });
+  }
 
   const [getNotice, setNotice] = useState("")
 
@@ -67,7 +66,7 @@ const ReviewForm = (props) => {
       </div>
       <div className="review-form">
         <form onSubmit={handleSubmit} id="reviewForm">
-        {/* <div className="rating">Overall</div>
+        <div className="rating">Overall</div>
           <StarRating
             size="large"
             name="overall"
@@ -83,7 +82,7 @@ const ReviewForm = (props) => {
             onMouseLeave={() => {
               setOverallHoverRating(undefined);
             }}
-          /> */}
+          />
           <label>
             Overall Experience 1 - 5, 5 being the best:
             <textarea
@@ -101,7 +100,7 @@ const ReviewForm = (props) => {
             />
           </label>
           <label>
-            Varietals Experienced (required):
+            Varietal/s Experienced (required):
             <textarea
               name="varietal"
               onChange={handleTextInputChange}

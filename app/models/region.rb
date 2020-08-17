@@ -4,4 +4,5 @@ class Region < ApplicationRecord
   validates :description, presence: true
 
   has_many :vineyards
+  has_many :varietals, through: :vineyards
 end

@@ -1,13 +1,13 @@
 import React from "react";
 
-const VineyardInformationComponent = ({ name, address, wines_available, region_location }) => {
+const VineyardInformationComponent = ({ name, address, wines_available }) => {
   return (
     <>
-      <li>
+      <div>
         <h5>{name}</h5>
         <p>{address}</p>
         <p>{wines_available}</p>
-      </li>
+      </div>
     </>
   );
 };

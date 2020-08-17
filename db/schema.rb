@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_162901) do
   create_table "varietals", force: :cascade do |t|
     t.string "name", null: false
     t.string "description", null: false
+    t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -73,8 +74,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_162901) do
   create_table "vineyards", force: :cascade do |t|
     t.string "name", null: false
     t.string "address", null: false
-    t.string "wines_available", null: false
-    t.string "region_location", null: false
+    t.string "wines_available", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "region_id", null: false

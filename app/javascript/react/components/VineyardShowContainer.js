@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VineyardInformationComponent from "./VineyardInformationComponent";
 import ReviewTile from "./ReviewTile";
+// import CellarTile from "./CellarTile";
 import { Link } from "react-router-dom";
 
 const VineyardShowContainer = (props) => {
@@ -8,10 +9,10 @@ const VineyardShowContainer = (props) => {
     name: "",
     address: "",
     wines_available: "",
-    region_location: "",
   });
 
   const [getReviews, setReviews] = useState([]);
+  // const [getCellarData, setCellarData] = useState([]);
 
   let vineyard_id = props.match.params.id;
 
@@ -30,9 +31,10 @@ const VineyardShowContainer = (props) => {
       .then((body) => {
         let vineyard = body.vineyardData;
         let reviews = body.reviewsData;
-        // let varietalList = body.varietalsData;
+        // let varietals = body.varietalsData;
         setVineyardData(vineyard);
         setReviews(reviews)
+        // setCellarData(varietals)
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
@@ -41,6 +43,9 @@ const VineyardShowContainer = (props) => {
     return <ReviewTile key={review.id} reviewData={review} />;
   });
 
+  // let cellarList = getCellarData.map((cellar) => {
+  //   return <CellarTile key={cellar.id} cellarData={cellar} />;
+  // });
   return (
   <div>
     <div>
@@ -48,7 +53,6 @@ const VineyardShowContainer = (props) => {
         name={getVineyardData.name}
         address={getVineyardData.address}
         wines_available={getVineyardData.wines_available}
-        region_location={getVineyardData.region_location}
       />
     </div> 
     <div>
