@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :regions, only: [:index, :show]
-      resources :vineyards, only: [:show] do
+      resources :vineyards, only: [:show, :create] do
         resources :reviews, only: [:create]
       end
       resources :cellars, only: [:show]

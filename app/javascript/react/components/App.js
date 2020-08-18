@@ -7,6 +7,7 @@ import RegionsIndexPage from "./RegionsIndexPage"
 import RegionShowContainer from "./RegionShowContainer"
 import VineyardShowContainer from "./VineyardShowContainer"
 import ReviewForm from "./ReviewForm"
+import VineyardForm from "./VineyardForm"
 import VarietalsIndexPage from "./VarietalsIndexPage"
 
 const App = (props) => {
@@ -19,6 +20,7 @@ const App = (props) => {
         <Route exact path="/regions/:id" component={RegionShowContainer} />
         <Route exact path="/vineyards/:id" component={VineyardShowContainer} />
         <Route exact path="/vineyards/:vineyard_id/reviews/new" component={ReviewForm} />
+        <Route exact path="/vineyards/new" component={VineyardForm} />
       </Switch>
     </BrowserRouter>
   )
