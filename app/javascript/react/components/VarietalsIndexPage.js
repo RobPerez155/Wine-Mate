@@ -37,7 +37,7 @@ const VarietalsIndexPage = (props) => {
 
   return (
     <>
-      <h3>Wine Varietals of the United States!</h3>
+      <h2>Wine Varietals of the United States!</h2>
         <div>
           <Link to={`/regions`}>Explore Wine Regions of the United States</Link>
           {listVarietals}

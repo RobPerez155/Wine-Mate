@@ -8,12 +8,8 @@ const ReviewTile = ({ reviewData }) => {
       <td width="1000">{reviewData.comment}</td>
       <td width="1000">{reviewData.varietal}</td>
       <td>
-        <StarRating
-            size="large"
-            name="overall"
-            rating={reviewData.overall}
-          />
-          </td>
+        <StarRating size="large" name="overall" rating={reviewData.overall} />
+      </td>
     </tr>
   );
 };

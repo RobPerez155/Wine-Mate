@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import VineyardTile from "./VineyardTile";
 
 const RegionShowContainer = (props) => {
-  
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
 
@@ -26,10 +25,10 @@ const RegionShowContainer = (props) => {
         setRegionName(vineyardList.name);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
-    }, []);
-    
+  }, []);
+
   const listVineyards = getVineyards.map((vineyard) => {
-    return ( 
+    return (
       <VineyardTile
         key={vineyard.id}
         name={vineyard.name}
@@ -38,18 +37,18 @@ const RegionShowContainer = (props) => {
         wines_available={vineyard.wines_available}
       />
     );
-  })
+  });
 
   return (
     <div>
       <h3>{getRegionName}</h3>
-        <div>
-          <div className="grid-container">
-            <div className="grid-x grid-margin-x small-up-2 medium-up-3">
-              {listVineyards}
-            </div>
+      <div>
+        <div className="grid-container">
+          <div className="grid-x grid-margin-x small-up-2 medium-up-3">
+            {listVineyards}
           </div>
         </div>
+      </div>
     </div>
   );
 };

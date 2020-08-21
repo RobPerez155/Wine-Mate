@@ -33,7 +33,7 @@ const VineyardShowContainer = (props) => {
         let reviews = body.reviewsData;
         // let varietals = body.varietalsData;
         setVineyardData(vineyard);
-        setReviews(reviews)
+        setReviews(reviews);
         // setCellarData(varietals)
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
@@ -47,40 +47,40 @@ const VineyardShowContainer = (props) => {
   //   return <CellarTile key={cellar.id} cellarData={cellar} />;
   // });
   return (
-  <div>
     <div>
-      <VineyardInformationComponent
-        name={getVineyardData.name}
-        address={getVineyardData.address}
-        wines_available={getVineyardData.wines_available}
-      />
-    </div> 
-    <div>
-    <Link
-      to={{
-        pathname: `/vineyards/${vineyard_id}/reviews/new`,
-        reviewProps: { vineyard_id },
-      }}
-      class="button primary"
-    >
-      New Review
-    </Link>
-  </div>
-  <table class="hover">
-  <thead>
-    <tr>
-      <div class="table-top">
-        <th width="200">Username</th>
-        <th width="450">Review</th>
-        <th width="200">Rating</th>
-        <th width="200">Wines Tasted</th>
-        <th width="200"> </th>
+      <div>
+        <VineyardInformationComponent
+          name={getVineyardData.name}
+          address={getVineyardData.address}
+          wines_available={getVineyardData.wines_available}
+        />
       </div>
-    </tr>
-  </thead>
-  <tbody>{reviewList}</tbody>
-</table>
-</div> 
+      <div>
+        <Link
+          to={{
+            pathname: `/vineyards/${vineyard_id}/reviews/new`,
+            reviewProps: { vineyard_id },
+          }}
+          class="button primary"
+        >
+          New Review
+        </Link>
+      </div>
+      <table class="hover">
+        <thead>
+          <tr>
+            <div class="table-top">
+              <th width="200">Username</th>
+              <th width="450">Review</th>
+              <th width="200">Rating</th>
+              <th width="200">Wines Tasted</th>
+              <th width="200"> </th>
+            </div>
+          </tr>
+        </thead>
+        <tbody>{reviewList}</tbody>
+      </table>
+    </div>
   );
 };
 
