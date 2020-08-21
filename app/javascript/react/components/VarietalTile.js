@@ -6,7 +6,7 @@ const VarietalTile = ({ id, name, image_url, description }) => {
       <img src={image_url} />
       <h3>{name}</h3>
       <p> {description}</p>
-      <br></br>  
+      <br></br>
     </div>
   );
 };
