@@ -89,7 +89,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 5px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -171,7 +171,7 @@ $paragraph-margin-bottom: 1rem;
 $paragraph-text-rendering: optimizeLegibility;
 $enable-code-inline: true;
 $anchor-color: white;
-$anchor-color-hover: scale-color($anchor-color, $lightness: -25%);
+$anchor-color-hover: scale-color(#C71D2B);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
 $hr-width: $global-width;
@@ -348,9 +348,9 @@ $callout-link-tint: 30%;
 
 $card-background: $white;
 $card-font-color: $body-font-color;
-$card-divider-background: $light-gray;
+$card-divider-background: #C71D2B;;
 $card-border: 1px solid $light-gray;
-$card-shadow: none;
+$card-shadow: 0 10px 20px 0 rgba($dark-gray, 0.6);
 $card-border-radius: $global-radius;
 $card-padding: $global-padding;
 $card-margin-bottom: $global-margin;
@@ -873,10 +873,12 @@ $tooltip-radius: $global-radius;
 
 $topbar-padding: 0.5rem;
 $topbar-background: black;
+$topbar-color: white;
 $topbar-submenu-background: $topbar-background;
 $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
+
 
 // 56. Xy Grid
 // -----------

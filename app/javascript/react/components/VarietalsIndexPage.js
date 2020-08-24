@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import VarietalTile from "./VarietalTile"
+import VarietalTile from "./VarietalTile";
 
 const VarietalsIndexPage = (props) => {
   const [getVarietals, setVarietals] = useState([]);
@@ -31,18 +31,20 @@ const VarietalsIndexPage = (props) => {
         name={varietal.name}
         description={varietal.description}
         image_url={varietal.image_url}
-        />
-  );
-});
+      />
+    );
+  });
 
   return (
     <>
-      <h2>Wine Varietals of the United States!</h2>
-        <div>
-          <Link to={`/regions`}>Explore Wine Regions of the United States</Link>
-          {listVarietals}
-        </div>
+      <h2 class="home-p">Wine Varietals of the United States!</h2>
+      <div className="grid-container home-p">
+        <Link className="anchor" to={`/regions`}>
+          Explore Wine Regions of the United States
+        </Link>
+        {listVarietals}
+      </div>
     </>
-  )
-  }
+  );
+};
 export default VarietalsIndexPage;
