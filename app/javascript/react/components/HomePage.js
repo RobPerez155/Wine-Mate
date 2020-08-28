@@ -7,7 +7,7 @@ const HomePage = (props) => {
         className="home-img"
         src="https://i.pinimg.com/originals/7e/b8/3a/7eb83ad929825f4c3444275bc888ecb4.jpg"
       ></img>
-      <h2 class="text-center">
+      <h2 className="text-center">
         Welcome to Wine
         <img
           className="wine-mate-logo"
@@ -27,23 +27,23 @@ const HomePage = (props) => {
         they have been doing over the last 10 years.
       </p>
 
-      <div class="grid-x grid-margin-x small-up-2 medium-up-2 large-up-2">
-        <div class="cell">
-          <div class="card">
+      <div className="grid-x grid-margin-x small-up-2 medium-up-2 large-up-2">
+        <div className="cell">
+          <div className="card">
             <img src="https://www.duckhorn.com/assets/client/Image/blog/goldeneye.jpg"></img>
             <Link className="anchor" to={`/regions`}>
-              <div class="card-section text-center">
+              <div className="card-section text-center">
                 <h4>Vineyards</h4>
                 Explore Wine Regions of the United States
               </div>
             </Link>
           </div>
         </div>
-        <div class="cell">
-          <div class="card">
+        <div className="cell">
+          <div className="card">
             <img src="https://www.duckhorn.com/assets/client/Image/blog/Calera-Caves.jpg"></img>
             <Link className="anchor" to={`/varietals`}>
-              <div class="card-section text-center">
+              <div className="card-section text-center">
                 <h4>Varietals</h4>
                 Explore Wine Varietals of the United States
               </div>

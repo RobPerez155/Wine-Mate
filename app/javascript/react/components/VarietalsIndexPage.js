@@ -37,13 +37,13 @@ const VarietalsIndexPage = (props) => {
 
   return (
     <>
-      <h2 class="home-p">Wine Varietals of the United States!</h2>
-      <div className="grid-container home-p">
+      <h2 className="home-p">Wine Varietals of the United States!</h2>
         <Link className="anchor" to={`/regions`}>
           Explore Wine Regions of the United States
         </Link>
+        <div className="columns 2">
         {listVarietals}
-      </div>
+        </div>
     </>
   );
 };
