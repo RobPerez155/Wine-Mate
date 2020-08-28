@@ -14,11 +14,11 @@ Region.create(name:"Southeast", image_url:"https://asset---north-carolina.bldg15
 northwest = 3
 Region.create(name:"Northwest", image_url:"https://s.hdnux.com/photos/73/36/77/15593462/7/gallery_xlarge.jpg", description:"Washington and Oregon specialising in Bordeaux Blend, Riesling, Syrah, Pinot Noir, Pinot Gris, and Chardonnay.")
 west = 4
-Region.create(name:"West", image_url:"https://assets.simpleviewinc.com/simpleview/image/upload/crm/napavalley/V-Sattui-eaf919d05056a36_eaf91e08-5056-a36a-082c067064e9d45f.jpg", description:"California specialising in Chardonnay, Cabernet Sauvignon, Zinfandel, Pinot Noir, and Syrah.")
+Region.create(name:"West", image_url:"https://winecountry-media.s3.amazonaws.com/21083-media-SlideshowImage1-VSattuiWinery-Building-1200x600.jpg", description:"California specialising in Chardonnay, Cabernet Sauvignon, Zinfandel, Pinot Noir, and Syrah.")
 southwest = 5
-Region.create(name:"Southwest", image_url:"https://cdn.hswstatic.com/gif/south-west-wine-region-1.jpg", description:"Arizona, New Mexico, and Texas specialising in Bordeaux Blend, Riesling, Sparkling Wine, Viognier, Tempranillo, and Mourvedre.")
+Region.create(name:"Southwest", image_url:"https://www.jamessuckling.com/shared/uploads/2019/11/Tasting-room-at-William-Chris-Winery-in-Hye-Texas.jpg", description:"Arizona, New Mexico, and Texas specialising in Bordeaux Blend, Riesling, Sparkling Wine, Viognier, Tempranillo, and Mourvedre.")
 midwest = 6
-Region.create(name:"Midwest", image_url:"https://www.saturdayeveningpost.com/wp-content/uploads/satevepost/2018-07-26-wine-banner.jpg", description:"Illinois, Michigan, and Missouri specialising in Riesling, Pinot Noir, Pinot Grigio, Norton, Chamborcin, Vidal, and Chardonel varietals.")
+Region.create(name:"Midwest", image_url:"https://media.timeout.com/images/105685514/1372/772/image.jpg", description:"Illinois, Michigan, and Missouri specialising in Riesling, Pinot Noir, Pinot Grigio, Norton, Chamborcin, Vidal, and Chardonel varietals.")
 
 # --------------------------Varietals--------------------------
 

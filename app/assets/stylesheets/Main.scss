@@ -20,6 +20,37 @@
   color: black;
 }
 
+.region-card {
+  max-height: 500px;
+  min-height: 300px;
+}
+
+.card-divider.secondary {
+  background-color: scale-color(#881023);
+}
+
+.body {
+  margin: 15%;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  label { font-weight: bold; color: white; background-color: #79A903; width: 90px; text-align: center; }
+}
+
+.grapevine {
+  margin-top: 20px;
+  margin-bottom: 0px;
+  background-image: url("https://www.gardeningknowhow.com/wp-content/uploads/2019/03/grapes.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.white {
+  margin-top: 20px;
+  color: white;
+}
+
 // .wrap {
 //   @include flex-grid-row($behavior, $size, $columns, $base, false, $gutters) { }
 // }

@@ -37,13 +37,14 @@ const RegionsIndexPage = (props) => {
 
   return (
     <>
-      <h2>Wine Regions of the United States!</h2>
-      <div>
-        <Link to={`/varietals`}>
+      <h1 className="home-p">Wine Regions</h1>
+      <h3 className="home-p">
+        <Link className="anchor" to={`/varietals`}>
           Explore Wine Varietals of the United States
         </Link>
-        {listRegions}
-      </div>
+      </h3>
+      <br></br>
+      <div>{listRegions}</div>
     </>
   );
 };
