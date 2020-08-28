@@ -7,7 +7,7 @@ const VarietalTile = ({ id, name, image_url, description }) => {
         <div className="grid-x grid-margin-x small-up-1 medium-up-2 large-up-2">
           <div className="cell">
             <div className="card">
-              <div class="card-divider home-p"></div>
+              <div className="card-divider"></div>
               <img src={image_url}></img>
               <div className="card-section home-p">
                 <p>{description}</p>
