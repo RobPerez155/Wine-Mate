@@ -5,6 +5,13 @@
   height: 470px;
 }
 
+.region-show-img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 75%;
+  height: 75%;
+}
+
 .wine-mate-logo {
   width: 60px;
   height: 45px;
@@ -47,7 +54,14 @@
   margin-bottom: 0px;
   background-image: url("https://images.radio.com/krldam/GettyImages-856526672.jpg");
   background-repeat: no-repeat;
-  // background-position-x: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.cellar {
+  margin-bottom: 0px;
+  background-image: url("https://media-exp1.licdn.com/dms/image/C4E1BAQEaEmHqya-rqQ/company-background_10000/0?e=2159024400&v=beta&t=50U8SkQQEY7qk47F-g4_rjs5Ytuz0zQxkzBLWrVpcSo");
+  background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }

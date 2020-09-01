@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const VineyardTile = ({ name, vineyardId, address, wines_available }) => {
   return (
     <>
-      <tr>
+      <tr className="home-p">
         <td width="200">
-          <Link to={`/vineyards/${vineyardId}`}>{name}</Link>
+          <Link className="anchor" to={`/vineyards/${vineyardId}`}>{name}</Link>
         </td>
         <td width="200">{address}</td>
         <td width="400">{wines_available}</td>

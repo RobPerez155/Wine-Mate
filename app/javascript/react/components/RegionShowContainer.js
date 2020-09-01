@@ -41,8 +41,9 @@ const RegionShowContainer = (props) => {
 
   return (
     <div>
-      <h3>{getRegionName}</h3>
-      <div>
+      <h3 class="home-p">{getRegionName}</h3>
+      <img className="home-img" source="https://static.vinepair.com/wp-content/uploads/2014/03/wineries-per-state-2012-heatmap-preview.png"></img>
+      <div className="home-p">
         <div className="grid-container">
           <div className="grid-x grid-margin-x small-up-2 medium-up-3">
             {listVineyards}
