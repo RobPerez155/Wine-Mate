@@ -1,4 +1,4 @@
-<div class=" grapevine">
+<div class="grapevine">
 <h2 class="home-p white">Sign up</h2>
 <div class="body">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -14,7 +14,7 @@
     <%= f.email_field :email, autocomplete: "email" %>
   </div>
 
-  <div class="field white">
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
