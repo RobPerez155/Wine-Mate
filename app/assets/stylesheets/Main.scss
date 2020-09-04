@@ -53,17 +53,19 @@
 .grapevine {
   margin-bottom: 0px;
   background-image: url("https://images.radio.com/krldam/GettyImages-856526672.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  overflow: scroll;
+  height: 90vh;
+  width: 100vw;
 }
 
 .cellar {
   margin-bottom: 0px;
   background-image: url("https://media-exp1.licdn.com/dms/image/C4E1BAQEaEmHqya-rqQ/company-background_10000/0?e=2159024400&v=beta&t=50U8SkQQEY7qk47F-g4_rjs5Ytuz0zQxkzBLWrVpcSo");
-  background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  height: 90vh;
+  width: 100vw;
 }
 
 .white {
@@ -71,6 +73,7 @@
   color: white;
 }
 
-// .wrap {
-//   @include flex-grid-row($behavior, $size, $columns, $base, false, $gutters) { }
-// }
+body {
+  margin: 0px;
+  padding: 0px;
+}

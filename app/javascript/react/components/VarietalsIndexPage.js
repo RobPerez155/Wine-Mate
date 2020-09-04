@@ -43,10 +43,12 @@ const VarietalsIndexPage = (props) => {
           Explore Wine Regions of the United States
         </Link>
       </h3>
-        <br></br>
-        <div className="columns 2">
-        {listVarietals}
+      <br></br>
+      <div className="grid-container">
+        <div className="grid-x grid-margin-x small-up-1 medium-up-2">
+          {listVarietals}
         </div>
+      </div>
     </>
   );
 };
