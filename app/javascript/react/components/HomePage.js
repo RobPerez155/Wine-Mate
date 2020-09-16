@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 const HomePage = (props) => {
   return (
-    <div>
+    <div className="white-bg">
       <img
         className="home-img"
-        src="https://i.pinimg.com/originals/7e/b8/3a/7eb83ad929825f4c3444275bc888ecb4.jpg"
+        src="https://www.2hawk.wine/wp-content/uploads/2017/12/2Hawk-Vineyard-and-Winery-Vineyard-Building-and-Mountains-with-Sunflare-Color-2800x900px-Optimized.jpg"
       ></img>
       <h2 className="text-center">
         Welcome to Wine
@@ -21,7 +21,7 @@ const HomePage = (props) => {
         fellow wine enthusiasts, and to empower you with the ability to discover
         new vineyards that offer wines to suit your tastes. Additionally, this
         website was developed as an educational project and relied heavily on
-        the hard work and researched by the folks at Winefolly.com. So if you
+        the hard work and research by the folks at Winefolly.com. So if you
         find any of this information interesting, please visit their site to
         find out more because what you see here is a tiny sampling of the work
         they have been doing over the last 10 years.
