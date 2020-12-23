@@ -21,17 +21,20 @@ class MapTile extends Component {
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
+      <div>
+
   <MapContainer className="map" center={position} zoom={this.state.zoom} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-    />
+      />
     <Marker position={position} icon={myIcon}>
       <Popup>
         A pretty CSS3 popup. <br /> Easily customizable.
       </Popup>
     </Marker>
   </MapContainer>
+      </div>
     );
   }
 }
