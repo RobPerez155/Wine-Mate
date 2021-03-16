@@ -1,29 +1,67 @@
 # README
 [![Codeship Status for RobPerez155/Wine-Mate](https://app.codeship.com/projects/f35ddb10-b89b-0138-8bf5-0ed9a3a19fca/status?branch=master)](https://app.codeship.com/projects/404816)
 
-Wine mate is a capstone project I created to bring together two of my favorite things, wine and traveling. The goal for this project is to have a platform where a user can plan a road trip through the United States to visit new vineyards. The user will also be able to see the read/add reviews for vineyards, and see the locations plotted across a map. 
+# Summary
 
-Wine Mate utilizes a Rails backend, Javascript React frontend, Foundation and Scss for styling, and React Leaflet was used for plotting vineyard locations on the map.
+[Wine mate](https://enigmatic-forest-26491.herokuapp.com/ "Visit the site") is a capstone project I created to bring together two of my favorite things, wine and traveling. The goal for this project is to have a platform where a user can plan a road trip through the United States to visit new vineyards. The user will also be able to see the read/add reviews for vineyards, and see the locations plotted across a map. 
 
-Heroku Website
-https://enigmatic-forest-26491.herokuapp.com/
+Wine Mate utilizes Ruby on Rails on the backend, Javascript React on the frontend, Foundation and Scss for styling, and React Leaflet for plotting vineyard locations on the map.
 
-Usage instructions - 
-This app can be freely navigated without logging in, submitting a review will require you to create a username and password. Currently, a user will be able to view information on wine varietals & wine regions, leave reviews, and sign up/in.
+# Screenshots of App
+![WineMate HomePage](https://lh3.googleusercontent.com/xZz-AlkGqRGtRa63PLvY_QMfGU3fg6OlUEQDCx4AOdd65985GMg92YXwg56tltDvgZes=s136 "Homepage")
 
-A To-Do list - Software is never finished
-  Bugs
-Map is cut up into boxes and is jumbled across the webpage. The current site does not have the error described here but it is available in the git project.
+![WineMate Sign Up](https://lh3.googleusercontent.com/jBKrUJXlj9hujRWE5MzYGR9omqBuqPvg_811PyFrio-OWQTBeaz0_2MlLHGud3RPxULX2A=s136 "Sign Up")
 
-	Any future features to be implemented
-Incorporate a feature to allow a user to add new vineyards
-Testing
-I would like to get access to an API with data on American vineyards and their wine selections. 
-Expand this program to French, Spanish, Italian, NZ wine regions.
-Chat feature where questions can be left for vintners
-Turn this into a mobile app
+![WineMate Log In](https://lh3.googleusercontent.com/ngPTOZEeaf8QZaoMAbOMXEaqc3zFYKlFg13iVD3vUpcXAZWXzuNVP22VNfdoaKkO8EIucBA=s136 "Log In")
 
-	Nice to haves
-An internal navigation system that can be used offline.
+![WineMate Varietals](https://lh3.googleusercontent.com/LgNx9htBCAMiScSApJLXHYR-Sxrdpurv3U9ND61h-aS1jDEPOzFYoKo3hJjPyJOztizP=s136 "Varietals")
 
+# Built With
+[Ruby on Rails](https://guides.rubyonrails.org/ "Ruby on Rails Documentation")
+
+[React.js](https://reactjs.org/docs/getting-started.html "React.js Documentation")
+
+[PostgreSQL](https://www.postgresql.org/docs/12/index.html "PostgreSQL Documentation")
+
+
+# Getting Started
+The following versions were used to build this project:
+
+- React 17.0.1
+- Ruby 2.6.5
+- Rails 5.2.4.3
+- PostgreSQL 12.3
+
+#### Checkout the Repository
+```
+git clone https://github.com/RobPerez155/Wine-Mate
+```
+
+#### Create and Setup Database
+```
+bundle exec rake db:setup
+```
+
+#### Start Rails Server and Webpack Server
+```
+bundle exec rails s
+yarn run start
+```
+
+#### Use http://localhost:3000 to Wine-Mate App
+---
+## To-Do list - Software is never finished.
+- The next item that needs to be addressed is a bug with the React Leaflet. Currently, the map is cut up into boxes and is jumbled across the webpage. 
+
+## Future features to be implemented
+- Testing
+- I would like to get access to an API with data on American vineyards and their wine selections. 
+- Expand this program to French, Spanish, Italian, NZ wine regions.
+- Chat feature where questions can be left for vintners.
+- Turn this into a mobile ready app.
+- An internal navigation system that can be used offline.
+
+## Contributions
 If you would like to contribute you can reach me at robert.perez.psirho@gmail.com and would be happy to go into further detail about the project.
+
+>Ad Astra Per Aspera
