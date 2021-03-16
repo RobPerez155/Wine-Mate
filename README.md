@@ -8,13 +8,13 @@
 Wine Mate utilizes Ruby on Rails on the backend, Javascript React on the frontend, Foundation and Scss for styling, and React Leaflet for plotting vineyard locations on the map.
 
 # Screenshots of App
-![WineMate HomePage](https://lh3.googleusercontent.com/xZz-AlkGqRGtRa63PLvY_QMfGU3fg6OlUEQDCx4AOdd65985GMg92YXwg56tltDvgZes=s136 "Homepage")
+![WineMate HomePage](https://i.ibb.co/gWRL16h/Wine-Mate-Homepage.png "Homepage")
 
-![WineMate Sign Up](https://lh3.googleusercontent.com/jBKrUJXlj9hujRWE5MzYGR9omqBuqPvg_811PyFrio-OWQTBeaz0_2MlLHGud3RPxULX2A=s136 "Sign Up")
+![WineMate Sign Up](https://i.ibb.co/t3GPfxd/Wine-Mate-Sign-Up-Page.png "Sign Up")
 
-![WineMate Log In](https://lh3.googleusercontent.com/ngPTOZEeaf8QZaoMAbOMXEaqc3zFYKlFg13iVD3vUpcXAZWXzuNVP22VNfdoaKkO8EIucBA=s136 "Log In")
+![WineMate Log In](https://i.ibb.co/cL8q5Rq/Wine-Mate-Log-In-Page.png "Log In")
 
-![WineMate Varietals](https://lh3.googleusercontent.com/LgNx9htBCAMiScSApJLXHYR-Sxrdpurv3U9ND61h-aS1jDEPOzFYoKo3hJjPyJOztizP=s136 "Varietals")
+![WineMate Varietals](https://i.ibb.co/VjNz4d2/Wine-Mate-Varietals-Page.png "Varietals")
 
 # Built With
 [Ruby on Rails](https://guides.rubyonrails.org/ "Ruby on Rails Documentation")
