@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 import { Route, Switch, BrowserRouter } from "react-router-dom"
 
 import HomePage from "./HomePage"
@@ -7,7 +8,7 @@ import RegionsIndexPage from "./RegionsIndexPage"
 import RegionShowContainer from "./RegionShowContainer"
 import VineyardShowContainer from "./VineyardShowContainer"
 import ReviewForm from "./ReviewForm"
-import VarietalsIndexPage from "./VarietalsIndexPage"
+import VarietalsIndexPage from "./VarietalsIndexPage" 
 
 const App = (props) => {
   return (

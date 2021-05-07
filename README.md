@@ -62,6 +62,7 @@ yarn run start
 - An internal navigation system that can be used offline.
 
 ## Contributions
-If you would like to contribute you can reach me at robert.perez.psirho@gmail.com and I would be happy to go into further detail and collaborate on this project.
+
+If you would like to contribute you can reach me at robert.perez.psirho@gmail.com and would be happy to go into further detail about the project.
 
 >Ad Astra Per Aspera
