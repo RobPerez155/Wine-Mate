@@ -42,9 +42,8 @@ const RegionShowContainer = (props) => {
 
   return (
     <div>
-      <MapTile />
       <h3 class="home-p">{getRegionName}</h3>
-      <img className="home-img" source="https://i.pinimg.com/originals/7e/b8/3a/7eb83ad929825f4c3444275bc888ecb4.jpg"></img>
+      <MapTile />
       <div className="home-p">
         <div className="grid-container">{listVineyards}</div>
       </div>

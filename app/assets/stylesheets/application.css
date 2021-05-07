@@ -18,3 +18,10 @@
  .map{
   height: 200px;
 }
+
+.leaflet-container{
+  width: 60vw;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+}
