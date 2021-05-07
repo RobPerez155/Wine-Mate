@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Component } from "react";
 import VineyardInformationComponent from "./VineyardInformationComponent";
 import ReviewTile from "./ReviewTile";
-import MapTile from "./MapTile";
 import { Link } from "react-router-dom";
 
 const VineyardShowContainer = (props) => {

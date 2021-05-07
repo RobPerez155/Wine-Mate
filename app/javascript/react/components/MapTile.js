@@ -1,6 +1,6 @@
 import React from "react";
 import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Marker, Popup } from "react-leaflet";
 
 const myIcon = L.icon({
   iconUrl:
@@ -11,27 +11,15 @@ const myIcon = L.icon({
 });
 
 const MapTile = ({ name, vineyardId, address, wines_available }) => {
-  console.log(name)
+
   const position = [42.704389, -72.171976];
   return (
     <div>
-      <MapContainer
-        className="leaflet-container"
-        center={position}
-        zoom={6}
-        scrollWheelZoom={false}
-      >
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-
-        <Marker position={position} icon={myIcon}>
-          <Popup>
-            {name} <br /> Easily customizable.
-          </Popup>
-        </Marker>
-      </MapContainer>
+      <Marker position={position} icon={myIcon}>
+        <Popup>
+        {name}<br /> Easily customizable.
+        </Popup>
+      </Marker>
     </div>
   );
 };
