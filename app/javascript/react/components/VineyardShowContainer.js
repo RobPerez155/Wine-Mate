@@ -3,10 +3,6 @@ import VineyardInformationComponent from "./VineyardInformationComponent";
 import ReviewTile from "./ReviewTile";
 import MapTile from "./MapTile";
 import { Link } from "react-router-dom";
-import "/Users/robp/challenges/wine_mate/app/assets/stylesheets/application.css";
-import L from "leaflet";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-
 
 const VineyardShowContainer = (props) => {
   const [getVineyardData, setVineyardData] = useState({
@@ -16,7 +12,6 @@ const VineyardShowContainer = (props) => {
   });
   
   const [getReviews, setReviews] = useState([]);
-  // const [getCellarData, setCellarData] = useState([]);
   
   let vineyard_id = props.match.params.id;
   
@@ -58,7 +53,7 @@ const VineyardShowContainer = (props) => {
         <VineyardInformationComponent
           name={getVineyardData.name}
           />
-      <MapTile />
+      {/* <MapTile /> //This should be changed to a photo of the vineyard */}
         <VineyardInformationComponent
           address={getVineyardData.address}
           wines_available={getVineyardData.wines_available}

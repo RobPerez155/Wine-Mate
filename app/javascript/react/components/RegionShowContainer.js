@@ -40,14 +40,27 @@ const RegionShowContainer = (props) => {
     );
   });
 
+  const vineyardsMap = getVineyards.map((vineyard) => {
+    return (
+      <MapTile
+        key={vineyard.id}
+        name={vineyard.name}
+        vineyardId={vineyard.id}
+        address={vineyard.address}
+        wines_available={vineyard.wines_available}
+      />
+    );
+  });
+
   return (
-    <div>
-      <h3 class="home-p">{getRegionName}</h3>
-      <MapTile />
+    <>
+      <h3 className="home-p">{getRegionName}</h3>
+      <MapTile/>
       <div className="home-p">
         <div className="grid-container">{listVineyards}</div>
+        <div>{vineyardsMap}</div>
       </div>
-    </div>
+    </>
   );
 };
 
