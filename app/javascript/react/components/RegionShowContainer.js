@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import VineyardTile from "./VineyardTile";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MapTile from "./MapTile";
+import ChangeView from "./ChangeView"
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
+  const [getRegionPosition, setRegionPosition] = useState(null);
 
   useEffect(() => {
     let regionId = props.match.params.id;
@@ -24,6 +26,7 @@ const RegionShowContainer = (props) => {
         let vineyardList = body;
         setVineyards(vineyardList.vineyards);
         setRegionName(vineyardList.name);
+        setRegionPosition(vineyardList.position);
       })
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
@@ -39,19 +42,10 @@ const RegionShowContainer = (props) => {
           wines_available={vineyard.wines_available}
         />
       )
-      // ,
-      // (
-      //   <MapTile
-      //     key={vineyard.id}
-      //     name={vineyard.name}
-      //     vineyardId={vineyard.id}
-      //     address={vineyard.address}
-      //     wines_available={vineyard.wines_available}
-      //   />
-      // )
     );
   });
-
+  
+console.log(getRegionPosition)
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
@@ -62,6 +56,7 @@ const RegionShowContainer = (props) => {
           zoom={6}
           scrollWheelZoom={false}
         >
+          {/* <ChangeView center={getRegionPosition} zoom={6} /> */}
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
