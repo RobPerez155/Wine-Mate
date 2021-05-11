@@ -8,17 +8,17 @@
 
 # --------------------------Regions--------------------------
 northeast = 1
-Region.create(name:"Northeast", image_url:"https://ctwine.com/wp-content/uploads/2012/07/GVwinery.jpg", description:"New York, Connecticut, Massachusetts, Pennsylvania, and New Jersey specialising in Concord, Rosé, Merlot, Riesling, and Ice Wine.", position:[42.682955, -73.855658])
+Region.create(name:"Northeast", image_url:"https://ctwine.com/wp-content/uploads/2012/07/GVwinery.jpg", description:"New York, Connecticut, Massachusetts, Pennsylvania, and New Jersey specialising in Concord, Rosé, Merlot, Riesling, and Ice Wine.") #, position:[42.682955, -73.855658])
 southeast = 2
-Region.create(name:"Southeast", image_url:"https://asset---north-carolina.bldg15.net/img/7/4/74f5ee8e-04b6-4c73-a44b-e8c1f1a2105f/JOLO%20Winery%20and%20Vineyards-crop(1,0.848,0,0.070,r4).jpg", description:"Virginia and North Carolina specialising in Chardonnay, Bordeaux Blend, Viognier, and Scuppernong.", position:[35.473009, -82.596332])
+Region.create(name:"Southeast", image_url:"https://asset---north-carolina.bldg15.net/img/7/4/74f5ee8e-04b6-4c73-a44b-e8c1f1a2105f/JOLO%20Winery%20and%20Vineyards-crop(1,0.848,0,0.070,r4).jpg", description:"Virginia and North Carolina specialising in Chardonnay, Bordeaux Blend, Viognier, and Scuppernong.") #, position:[35.473009, -82.596332])
 northwest = 3
-Region.create(name:"Northwest", image_url:"https://s.hdnux.com/photos/73/36/77/15593462/7/gallery_xlarge.jpg", description:"Washington and Oregon specialising in Bordeaux Blend, Riesling, Syrah, Pinot Noir, Pinot Gris, and Chardonnay.", position:[45.319792, -121.701904])
+Region.create(name:"Northwest", image_url:"https://s.hdnux.com/photos/73/36/77/15593462/7/gallery_xlarge.jpg", description:"Washington and Oregon specialising in Bordeaux Blend, Riesling, Syrah, Pinot Noir, Pinot Gris, and Chardonnay.") #, position:[45.319792, -121.701904])
 west = 4
-Region.create(name:"West", image_url:"https://winecountry-media.s3.amazonaws.com/21083-media-SlideshowImage1-VSattuiWinery-Building-1200x600.jpg", description:"California specialising in Chardonnay, Cabernet Sauvignon, Zinfandel, Pinot Noir, and Syrah.", position:[38.125255, -121.071441])
+Region.create(name:"West", image_url:"https://winecountry-media.s3.amazonaws.com/21083-media-SlideshowImage1-VSattuiWinery-Building-1200x600.jpg", description:"California specialising in Chardonnay, Cabernet Sauvignon, Zinfandel, Pinot Noir, and Syrah.") #, position:[38.125255, -121.071441])
 southwest = 5
-Region.create(name:"Southwest", image_url:"https://www.jamessuckling.com/shared/uploads/2019/11/Tasting-room-at-William-Chris-Winery-in-Hye-Texas.jpg", description:"Arizona, New Mexico, and Texas specialising in Bordeaux Blend, Riesling, Sparkling Wine, Viognier, Tempranillo, and Mourvedre.", position:[33.611257, -104.830863])
+Region.create(name:"Southwest", image_url:"https://www.jamessuckling.com/shared/uploads/2019/11/Tasting-room-at-William-Chris-Winery-in-Hye-Texas.jpg", description:"Arizona, New Mexico, and Texas specialising in Bordeaux Blend, Riesling, Sparkling Wine, Viognier, Tempranillo, and Mourvedre.") #, position:[33.611257, -104.830863])
 midwest = 6
-Region.create(name:"Midwest", image_url:"https://media.timeout.com/images/105685514/1372/772/image.jpg", description:"Illinois, Michigan, and Missouri specialising in Riesling, Pinot Noir, Pinot Grigio, Norton, Chamborcin, Vidal, and Chardonel varietals.", position:[42.485685, -89.966524])
+Region.create(name:"Midwest", image_url:"https://media.timeout.com/images/105685514/1372/772/image.jpg", description:"Illinois, Michigan, and Missouri specialising in Riesling, Pinot Noir, Pinot Grigio, Norton, Chamborcin, Vidal, and Chardonel varietals.") #, position:[42.485685, -89.966524])
 
 # --------------------------Varietals--------------------------
 

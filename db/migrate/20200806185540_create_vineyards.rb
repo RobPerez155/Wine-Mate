@@ -4,7 +4,7 @@ class CreateVineyards < ActiveRecord::Migration[5.2]
       t.string :name, null: false
       t.string :address, null: false
       t.string :wines_available, array: true, default:[]
-      # t.integer :position, array: true, default:[]
+      # t.float :position, array: true, default:[]
 
       t.timestamps null: false
 
