@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import VineyardTile from "./VineyardTile";
 import { Map, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MapTile from "./MapTile";
-import ChangeView from "./ChangeView"
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
@@ -44,7 +43,7 @@ const RegionShowContainer = (props) => {
       )
     );
   });
-  
+
 console.log(getRegionPosition)
   return (
     <>
@@ -56,7 +55,6 @@ console.log(getRegionPosition)
           zoom={6}
           scrollWheelZoom={false}
         >
-          {/* <ChangeView center={getRegionPosition} zoom={6} /> */}
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
