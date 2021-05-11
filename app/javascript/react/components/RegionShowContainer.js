@@ -44,7 +44,6 @@ const RegionShowContainer = (props) => {
     );
   });
 
-console.log(getRegionPosition)
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
