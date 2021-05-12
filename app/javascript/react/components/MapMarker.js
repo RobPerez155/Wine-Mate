@@ -13,9 +13,21 @@ const myIcon = L.icon({
 const MapTile = ({ name, vineyardId, address, wines_available }) => {
 
   const position = [42.704389, -72.171976];
+  const position0 = [42.704389, -71.171976];
+  const position1 = [41.704389, -72.171976];
   return (
     <div>
       <Marker position={position} icon={myIcon}>
+        <Popup>
+        {name}<br /> Easily customizable.
+        </Popup>
+      </Marker>
+      <Marker position={position0} icon={myIcon}>
+        <Popup>
+        {name}<br /> Easily customizable.
+        </Popup>
+      </Marker>
+      <Marker position={position1} icon={myIcon}>
         <Popup>
         {name}<br /> Easily customizable.
         </Popup>
@@ -24,4 +36,4 @@ const MapTile = ({ name, vineyardId, address, wines_available }) => {
   );
 };
 
-export default MapTile;
+export default MapMarker;

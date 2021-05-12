@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import VineyardTile from "./VineyardTile";
 import { Map, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import MapTile from "./MapTile";
+import MapMarker from "./MapMarker";
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
-  const [getRegionPosition, setRegionPosition] = useState(null);
+  const [getRegionPosition, setRegionPosition] = useState([42,-73]);
 
   useEffect(() => {
     let regionId = props.match.params.id;
@@ -43,14 +43,14 @@ const RegionShowContainer = (props) => {
       )
     );
   });
-
+console.log(getRegionPosition)
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
       <div>
         <MapContainer
           className="leaflet-container"
-          center={[42.704389, -72.171976]}
+          center={getRegionPosition}
           zoom={6}
           scrollWheelZoom={false}
         >
@@ -58,7 +58,7 @@ const RegionShowContainer = (props) => {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <MapTile />
+          <MapMarker/>
         </MapContainer>
       </div>
       <div className="home-p">
