@@ -10,7 +10,7 @@ const myIcon = L.icon({
   popupAnchor: [0, -41],
 });
 
-const MapTile = ({ name, vineyardId, address, wines_available }) => {
+const MapMarker = ({ name, vineyardId, address, wines_available }) => {
 
   const position = [42.704389, -72.171976];
   const position0 = [42.704389, -71.171976];

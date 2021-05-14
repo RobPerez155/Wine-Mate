@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import VineyardTile from "./VineyardTile";
-import { Map, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import MapMarker from "./MapMarker";
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
-  const [getRegionPosition, setRegionPosition] = useState([42,-73]);
+  const [getRegionPosition, setRegionPosition] = useState([40.5,-99.8]);
 
   useEffect(() => {
     let regionId = props.match.params.id;
@@ -43,14 +43,20 @@ const RegionShowContainer = (props) => {
       )
     );
   });
-console.log(getRegionPosition)
+
+  const FlyTo = ({ center, zoom }) => {
+    const map = useMap()
+    map.flyTo(center, zoom)
+    return null
+  }
+
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
       <div>
         <MapContainer
           className="leaflet-container"
-          center={getRegionPosition}
+          center={[40.5,-99.8]}
           zoom={6}
           scrollWheelZoom={false}
         >
@@ -58,6 +64,7 @@ console.log(getRegionPosition)
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <FlyTo center={getRegionPosition} zoom={6} />
           <MapMarker/>
         </MapContainer>
       </div>
