@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
+import MapMarker from "./MapMarker";
 import VineyardTile from "./VineyardTile";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import MapMarker from "./MapMarker";
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
@@ -30,27 +30,43 @@ const RegionShowContainer = (props) => {
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
-  const listVineyards = getVineyards.map((vineyard) => {
-    return (
-      (
-        <VineyardTile
-          key={vineyard.id}
-          name={vineyard.name}
-          vineyardId={vineyard.id}
-          address={vineyard.address}
-          wines_available={vineyard.wines_available}
-        />,
-        <MapMarker
-          key={vineyard.id}
-          name={vineyard.name}
-          vineyardId={vineyard.id}
-          address={vineyard.address}
-          wines_available={vineyard.wines_available}
-        />
-      )
-    );
-  });
-
+  // const listVineyards = getVineyards.map((vineyard) => {
+  //   return (
+  //     (
+  //       <MapMarker
+  //         key={vineyard.id}
+  //         name={vineyard.name}
+  //         position={vineyard.position}
+  //       />,
+  //       <VineyardTile
+  //       key={vineyard.id}
+  //       name={vineyard.name}
+  //       vineyardId={vineyard.id}
+  //       address={vineyard.address}
+  //       wines_available={vineyard.wines_available}
+  //       />
+  //       )
+  //       );
+  //     });
+      
+      const listVineyards = getVineyards.map((vineyard) => {
+        return (
+          (
+            <VineyardTile
+              key={vineyard.id}
+              name={vineyard.name}
+              vineyardId={vineyard.id}
+              address={vineyard.address}
+              wines_available={vineyard.wines_available}
+            />,
+            <MapMarker
+              key={vineyard.id}
+              name={vineyard.name}
+              position={vineyard.position}
+            />
+            )
+        );
+      });
   const FlyTo = ({ center, zoom }) => {
     const map = useMap()
     map.flyTo(center, zoom)
@@ -72,7 +88,8 @@ const RegionShowContainer = (props) => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <FlyTo center={getRegionPosition} zoom={6} />
-          <MapMarker/>
+          <MapMarker>{listVineyards}
+          </MapMarker>
         </MapContainer>
       </div>
       <div className="home-p">

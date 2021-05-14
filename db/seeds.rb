@@ -45,17 +45,17 @@ Varietal.create(name:"Rosé", description:"Rosé was once only thought of as fru
 
 # --------------------------Vineyards--------------------------
 
-Vineyard.create(name:"Gouveia Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: ["Chardonnay, Pinot Grigio, Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel"], region_id: northeast)
+Vineyard.create(name:"Gouveia Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: ["Chardonnay, Pinot Grigio, Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel"], region_id: northeast, position: [42.704389, -72.171976])
 
-Vineyard.create(name:"Willies Crazy Wine Shack", address:"10189 N Delaware Dr, Bangor, PA 18013", wines_available: ["Riesling", "Pinot Noir", "Rosé", "Concord", "Chardonnay"], region_id: northeast)
+Vineyard.create(name:"Willies Crazy Wine Shack", address:"10189 N Delaware Dr, Bangor, PA 18013", wines_available: ["Riesling", "Pinot Noir", "Rosé", "Concord", "Chardonnay"], region_id: northeast, position: [42.704389, -71.171976])
 
-Vineyard.create(name:"My Bathtub Vineyards", address:"5043 US-11, Homer, NY 13077", wines_available: ["Zinfandel", "Bordeaux Blend", "Riesling", "Concord"], region_id: northeast)
+Vineyard.create(name:"My Bathtub Vineyards", address:"5043 US-11, Homer, NY 13077", wines_available: ["Zinfandel", "Bordeaux Blend", "Riesling", "Concord"], region_id: northeast, position: [41.704389, -72.171976])
 
-Vineyard.create(name:"Humphrey's Liquor Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: ["Chardonnay, Pinot Grigio, Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel"], region_id: southeast)
+Vineyard.create(name:"Humphrey's Liquor Vineyards", address:"1339 Whirlwind Hill Rd, Wallingford, CT 06492", wines_available: ["Chardonnay, Pinot Grigio, Cabernet Sauvignon, Merlot, Pinot Noir, Zinfandel"], region_id: southeast, position: [1,1])
 
-Vineyard.create(name:"Agnes' Alcy's Wine Hole", address:"10189 N Delaware Dr, Bangor, PA 18013", wines_available: ["Riesling", "Pinot Noir", "Rosé", "Concord", "Chardonnay", "Niagara"], region_id: southeast)
+Vineyard.create(name:"Agnes' Alcy's Wine Hole", address:"10189 N Delaware Dr, Bangor, PA 18013", wines_available: ["Riesling", "Pinot Noir", "Rosé", "Concord", "Chardonnay", "Niagara"], region_id: southeast, position: [1,1])
 
-Vineyard.create(name:"Some Nice Vineyard", address:"5043 US-11, Homer, NY 13077", wines_available: ["Zinfandel", "Bordeaux Blend", "Riesling", "Concord"], region_id: southeast)
+Vineyard.create(name:"Some Nice Vineyard", address:"5043 US-11, Homer, NY 13077", wines_available: ["Zinfandel", "Bordeaux Blend", "Riesling", "Concord"], region_id: southeast, position: [1,1])
 
 # --------------------------Cellars--------------------------
 

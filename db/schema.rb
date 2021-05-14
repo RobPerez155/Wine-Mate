@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_162901) do
     t.string "name", null: false
     t.string "image_url", null: false
     t.string "description", null: false
-    t.integer "position", default: [], array: true
+    t.float "position", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_162901) do
     t.string "name", null: false
     t.string "address", null: false
     t.string "wines_available", default: [], array: true
+    t.float "position", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "region_id", null: false
