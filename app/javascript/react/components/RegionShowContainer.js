@@ -39,6 +39,13 @@ const RegionShowContainer = (props) => {
           vineyardId={vineyard.id}
           address={vineyard.address}
           wines_available={vineyard.wines_available}
+        />,
+        <MapMarker
+          key={vineyard.id}
+          name={vineyard.name}
+          vineyardId={vineyard.id}
+          address={vineyard.address}
+          wines_available={vineyard.wines_available}
         />
       )
     );

@@ -28,6 +28,7 @@
     "prop-types": "~15.6.0",
     "react": "~16.8.0",
     "react-dom": "~16.8.0",
+    "react-geocode": "^0.2.3",
     "react-leaflet": "^3.0.5",
     "react-router-dom": "^5.2.0",
     "redbox-react": "1.6.0"

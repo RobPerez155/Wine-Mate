@@ -1,6 +1,11 @@
 import React from "react";
 import L from "leaflet";
 import { Marker, Popup } from "react-leaflet";
+import Geocode from "react-geocode"
+
+Geocode.setApiKey(process.env.GOOGLE_MAPS_APIKEY)
+Geocode.setLanguage("en")
+// Geocode.setLocationType("ROOFTOP")
 
 const myIcon = L.icon({
   iconUrl:
@@ -12,22 +17,24 @@ const myIcon = L.icon({
 
 const MapMarker = ({ name, vineyardId, address, wines_available }) => {
 
-  const position = [42.704389, -72.171976];
-  const position0 = [42.704389, -71.171976];
-  const position1 = [41.704389, -72.171976];
+  const coords = (address) => {
+    Geocode.fromAddress(address).then(
+      (response)=> {
+        const { lat, lng } = response.results[0].geometry.location
+        console.log(lat, lng)
+      },
+      (error) => {
+        console.error(error)
+      }
+    )
+  }
+
+  const position = coords({address})
+  // const position = [42.704389, -72.171976];
+
   return (
     <div>
       <Marker position={position} icon={myIcon}>
-        <Popup>
-        {name}<br /> Easily customizable.
-        </Popup>
-      </Marker>
-      <Marker position={position0} icon={myIcon}>
-        <Popup>
-        {name}<br /> Easily customizable.
-        </Popup>
-      </Marker>
-      <Marker position={position1} icon={myIcon}>
         <Popup>
         {name}<br /> Easily customizable.
         </Popup>
