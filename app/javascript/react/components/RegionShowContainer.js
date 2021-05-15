@@ -7,7 +7,6 @@ const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
   const [getRegionPosition, setRegionPosition] = useState([40.5, -99.8]);
-  const [activeVineyard, setActiveVineyard] = useState(null);
 
   useEffect(() => {
     let regionId = props.match.params.id;
@@ -48,7 +47,15 @@ const RegionShowContainer = (props) => {
     map.flyTo(center, zoom);
     return null;
   };
-console.log(activeVineyard)
+
+  const myIcon = L.icon({
+    iconUrl:
+      "https://previews.123rf.com/images/rukach/rukach1807/rukach180700223/105441971-glass-of-red-wine-with-splash-hand-drawing-wineglass-logo-icon-stock-vector-logo-illustration.jpg",
+    iconSize: [25, 25],
+    iconAnchor: [12.5, 41],
+    popupAnchor: [0, -41],
+  });
+
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
@@ -59,7 +66,6 @@ console.log(activeVineyard)
           zoom={6}
           scrollWheelZoom={false}
         >
-
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -74,30 +80,14 @@ console.log(activeVineyard)
                 vineyard.position[0], 
                 vineyard.position[1]
               ]}
-              onClick={() => {
-                setActiveVineyard(vineyard)
-              }}
-            />
-          ))}
-
-          {activeVineyard && (
-            <Popup
-              position={[
-                activeVineyard.position[0], 
-                activeVineyard.position[1]
-              ]}
-              onClose={() => {
-                setActiveVineyard(null)
-              }}
+              icon={myIcon}
             >
-              <div>
-                <h2>
-                  
-                {activeVineyard.name}
-                </h2>
-              </div>
-            </Popup>
-          )}
+              <Popup>
+                <h5>{vineyard.name}</h5>
+                {vineyard.wines_available}
+              </Popup>
+            </Marker>
+          ))}
         </MapContainer>
       </div>
       <div className="home-p">
