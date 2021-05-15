@@ -12,11 +12,9 @@ const myIcon = L.icon({
 
 const MapMarker = ({ name, position }) => {
 
-  console.log({name})
-  console.log({position})
   return (
     <>
-      <Marker position={[1,1]} icon={myIcon}>
+      <Marker position={[41,-72]} icon={myIcon}>
         <Popup>
         {"name"}<br /> Easily customizable.
         </Popup>

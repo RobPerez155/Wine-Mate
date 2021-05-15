@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import MapMarker from "./MapMarker";
 import VineyardTile from "./VineyardTile";
 import L from "leaflet";
 import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
@@ -7,7 +6,8 @@ import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
   const [getRegionName, setRegionName] = useState(null);
-  const [getRegionPosition, setRegionPosition] = useState([40.5,-99.8]);
+  const [getRegionPosition, setRegionPosition] = useState([40.5, -99.8]);
+  const [activeVineyard, setActiveVineyard] = useState(null);
 
   useEffect(() => {
     let regionId = props.match.params.id;
@@ -31,69 +31,73 @@ const RegionShowContainer = (props) => {
       .catch((error) => console.error(`Error in fetch: ${error.message}`));
   }, []);
 
-  // const listVineyards = getVineyards.map((vineyard) => {
-  //   return (
-  //     (
-  //       <MapMarker
-  //         key={vineyard.id}
-  //         name={vineyard.name}
-  //         position={vineyard.position}
-  //       />,
-  //       <VineyardTile
-  //       key={vineyard.id}
-  //       name={vineyard.name}
-  //       vineyardId={vineyard.id}
-  //       address={vineyard.address}
-  //       wines_available={vineyard.wines_available}
-  //       />
-  //       )
-  //       );
-  //     });
-      
-      const listVineyards = getVineyards.map((vineyard) => {
-        return (
-          (
-            <VineyardTile
-              key={vineyard.id}
-              name={vineyard.name}
-              vineyardId={vineyard.id}
-              address={vineyard.address}
-              wines_available={vineyard.wines_available}
-            />
-            // ,
-            // <MapMarker
-            //   key={vineyard.id}
-            //   name={vineyard.name}
-            //   position={vineyard.position}
-            // />
-            )
-        );
-      });
+  const listVineyards = getVineyards.map((vineyard) => {
+    return (
+      <VineyardTile
+        key={vineyard.id}
+        name={vineyard.name}
+        vineyardId={vineyard.id}
+        address={vineyard.address}
+        wines_available={vineyard.wines_available}
+      />
+    );
+  });
 
   const FlyTo = ({ center, zoom }) => {
-    const map = useMap()
-    map.flyTo(center, zoom)
-    return null
-  }
-  // console.log(listVineyards)
-  // console.log(listVineyards)
+    const map = useMap();
+    map.flyTo(center, zoom);
+    return null;
+  };
+console.log(activeVineyard)
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
       <div>
         <MapContainer
           className="leaflet-container"
-          center={[40.5,-99.8]}
+          center={[40.5, -99.8]}
           zoom={6}
           scrollWheelZoom={false}
         >
+
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+
           <FlyTo center={getRegionPosition} zoom={6} />
-          {/* <MapMarker>{listVineyards}
-          </MapMarker> */}
+
+          {getVineyards.map((vineyard) => (
+            <Marker
+              key={vineyard.id}
+              position={[
+                vineyard.position[0], 
+                vineyard.position[1]
+              ]}
+              onClick={() => {
+                setActiveVineyard(vineyard)
+              }}
+            />
+          ))}
+
+          {activeVineyard && (
+            <Popup
+              position={[
+                activeVineyard.position[0], 
+                activeVineyard.position[1]
+              ]}
+              onClose={() => {
+                setActiveVineyard(null)
+              }}
+            >
+              <div>
+                <h2>
+                  
+                {activeVineyard.name}
+                </h2>
+              </div>
+            </Popup>
+          )}
         </MapContainer>
       </div>
       <div className="home-p">
