@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import MapMarker from "./MapMarker";
 import VineyardTile from "./VineyardTile";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import L from "leaflet";
+import { MapContainer, TileLayer, useMap, Marker, Popup } from "react-leaflet";
 
 const RegionShowContainer = (props) => {
   const [getVineyards, setVineyards] = useState([]);
@@ -58,21 +59,24 @@ const RegionShowContainer = (props) => {
               vineyardId={vineyard.id}
               address={vineyard.address}
               wines_available={vineyard.wines_available}
-            />,
-            <MapMarker
-              key={vineyard.id}
-              name={vineyard.name}
-              position={vineyard.position}
             />
+            // ,
+            // <MapMarker
+            //   key={vineyard.id}
+            //   name={vineyard.name}
+            //   position={vineyard.position}
+            // />
             )
         );
       });
+
   const FlyTo = ({ center, zoom }) => {
     const map = useMap()
     map.flyTo(center, zoom)
     return null
   }
-
+  // console.log(listVineyards)
+  // console.log(listVineyards)
   return (
     <>
       <h3 className="home-p">{getRegionName}</h3>
@@ -88,8 +92,8 @@ const RegionShowContainer = (props) => {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <FlyTo center={getRegionPosition} zoom={6} />
-          <MapMarker>{listVineyards}
-          </MapMarker>
+          {/* <MapMarker>{listVineyards}
+          </MapMarker> */}
         </MapContainer>
       </div>
       <div className="home-p">
