@@ -3,7 +3,7 @@
 
 # Summary
 
-[Wine mate](https://enigmatic-forest-26491.herokuapp.com/ "Visit the site") is a capstone project I created to bring together two of my favorite things, wine and traveling. The goal for this project is to have a platform where a user can plan a road trip through the United States to visit new vineyards. The user will also be able to see the read/add reviews for vineyards, and see the locations plotted across a map. 
+[Wine mate](http://wine-mate.herokuapp.com/ "Visit the site") is a capstone project I created to bring together two of my favorite things, wine and traveling. The goal for this project is to have a platform where a user can plan a road trip through the United States to visit new vineyards. The user will also be able to see the read/add reviews for vineyards, and see the locations plotted across a map. 
 
 Wine Mate utilizes Ruby on Rails on the backend, Javascript React on the frontend, Foundation and Scss for styling, and React Leaflet for plotting vineyard locations on the map.
 
